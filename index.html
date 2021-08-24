@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./lib/fullpage/fullpage.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./lib/fullpage/easings.min.js"></script>
+    <script src="./lib/fullpage/scrolloverflow.min.js"></script>
+    <script src="./lib/fullpage/fullpage.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>당신의 일상 236:) 으로 채우다</title>
+  </head>
+
+  <body>
+    <!-- 메뉴 -->
+    <button id="hamburger" class="hamburger" onclick="handleNav()"></button>
+    <div id="nav" class="nav">
+      <a
+        href="#page1"
+        data-menuanchor="page1"
+        class="active"
+        onclick="handleNav()"
+        >당신의 일상<br />
+        <span>236:)</span> 으로 채우다</a
+      >
+      <a href="#page2" data-menuanchor="page2" onclick="handleNav()"
+        >미네랄 워터</a
+      >
+      <a href="#page3" data-menuanchor="page3" onclick="handleNav()"
+        >유아용 물티슈</a
+      >
+      <a href="#page4" data-menuanchor="page4" onclick="handleNav()"
+        >고탄력 칫솔8입</a
+      >
+    </div>
+    <div id="search" class="search" onclick="handleSearch()">
+      <img src="./images/search_btn.png" alt="" />
+    </div>
+    <div id="search_area" class="search_area">
+      <form action=""><input type="text" /><span>검색</span></form>
+    </div>
+
+    <!-- 내용 -->
+    <div id="fullpage">
+      <div class="section s_01">
+        <div class="container">
+          <div class="info">
+            <p>비울수록 채워지는 본질의 가치</p>
+            <h1>당신의 일상<br /><span>236:)으로 채우다</span></h1>
+            <div class="line"></div>
+            <div class="sns">
+              <a href="#">
+                <i class="far fa-heart"></i>
+                <span><b>본질</b>에만 충실한 236:)</span>
+              </a>
+              <a href="#">
+                <i class="far fa-envelope"></i>
+                <span><b>비움</b>의 여유를 전달합니다.</span>
+              </a>
+            </div>
+          </div>
+          <div class="photo p_01"></div>
+          <div class="mouse"></div>
+        </div>
+      </div>
+      <div class="section s_02">
+        <div class="container">
+          <div class="photo p_02"></div>
+          <div class="info">
+            <p>재료, 그 본연의 쓰임에 집중하다.</p>
+            <h1>
+              천연 암반수<br />
+              <span>236:)미네랄워터</span>
+            </h1>
+            <div class="line"></div>
+            <div class="sns">
+              <a href="#">
+                <i class="far fa-heart"></i>
+                <span><b>본질</b>에만 충실한 236:)</span>
+              </a>
+              <a href="#">
+                <i class="far fa-envelope"></i>
+                <span><b>비움</b>의 여유를 전달합니다.</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section s_03">
+        <div class="container">
+          <div class="info">
+            <p>브랜드를 비우고, 본질을 채우다</p>
+            <h1>레이온 함유,<br /><span>236:)유아용 물티슈</span></h1>
+            <div class="line"></div>
+            <div class="sns">
+              <a href="#">
+                <i class="far fa-heart"></i>
+                <span><b>본질</b>에만 충실한 236:)</span>
+              </a>
+              <a href="#">
+                <i class="far fa-envelope"></i>
+                <span><b>비움</b>의 여유를 전달합니다.</span>
+              </a>
+            </div>
+          </div>
+          <div class="photo p_03"></div>
+        </div>
+      </div>
+      <div class="section s_04">
+        <div class="container">
+          <div class="photo p_04"></div>
+          <div class="info">
+            <p>브랜드를 비우고, 본질을 채우다</p>
+            <h1>고탄력 이중미세모<br /><span>236:)칫솔 8입</span></h1>
+            <div class="line"></div>
+            <div class="sns">
+              <a href="#">
+                <i class="far fa-heart"></i>
+                <span><b>본질</b>에만 충실한 236:)</span>
+              </a>
+              <a href="#">
+                <i class="far fa-envelope"></i>
+                <span><b>비움</b>의 여유를 전달합니다.</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

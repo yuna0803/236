@@ -1,0 +1,453 @@
+:root {
+  --bg: #f9f9f9;
+  --dark: #2e2e2e;
+  --gray: #737373;
+  --light: #c8c8c8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: var(--bg);
+}
+
+/* a {
+  color: inherit;
+} */
+
+.hamburger {
+  width: 50px;
+  height: 50px;
+  background: var(--dark);
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--bg);
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  border: 1px solid var(--bg);
+  margin: 5px;
+  transition: transform 0.3s;
+}
+
+.hamburger.on:before {
+  transform: rotate(-45deg);
+}
+
+.hamburger.on:after {
+  transform: rotate(45deg);
+}
+
+.nav {
+  width: 500px;
+  height: 100vh;
+  background: var(--bg);
+  border-right: 1px solid var(--light);
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: left 0.4s;
+}
+
+.nav.active {
+  left: 0;
+}
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  margin: 20px 0;
+  font-size: 2.2rem;
+  font-weight: 100;
+  color: var(--dark);
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.nav a span {
+  font-weight: 700;
+}
+
+.nav a:hover {
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.nav a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--gray);
+  transition: width 0.3s;
+}
+
+.nav a.active {
+  opacity: 1;
+}
+
+.nav a.active:after {
+  width: 100%;
+}
+
+/* 검색 */
+.search {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 50x;
+  height: 50px;
+  z-index: 300;
+  cursor: pointer;
+}
+
+.search_area {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -86px;
+  left: 0;
+  background: var(--dark);
+  width: 100%;
+  height: 86px;
+  color: var(--dark);
+  z-index: 200;
+  transition: top 0.3s;
+}
+
+.search_area.active {
+  top: 0;
+}
+
+.search_area form {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.search_area input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: 1px solid var(--dark);
+  padding: 0 100px 0 20px;
+  border-radius: 6px;
+}
+
+.search_area span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 50px;
+  display: inline-block;
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+  color: var(--bg);
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* 내용 */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: var(--accent);
+}
+
+.section {
+}
+
+.mouse {
+  width: 24px;
+  height: 42px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../images/mouse.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mouse:after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url(../images/arrow.png);
+  position: relative;
+  top: 30px;
+  animation: 0.8s ease-in-out infinite mouseAni;
+}
+
+@keyframes mouseAni {
+  from {
+    top: 30px;
+  }
+  to {
+    top: 46px;
+    opacity: 0;
+  }
+}
+
+.s_01 {
+  background: #fff;
+}
+
+.s_02 {
+  background: var(--bg);
+}
+
+.s_03 {
+  background: #fff;
+}
+
+.s_04 {
+  background: var(--bg);
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  width: 560px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info p {
+  color: var(--light);
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  padding-left: 6px;
+}
+
+.info h1 {
+  font-size: 56px;
+  font-weight: 100;
+  line-height: 130%;
+  letter-spacing: -1px;
+  margin: 0px 0 40px;
+  color: var(--dark);
+}
+
+.info h1 span {
+  font-weight: 700;
+}
+
+.info .line {
+  width: 0;
+  height: 1px;
+  background: var(--gray);
+  margin-bottom: 70px;
+  transition: width 0.6s;
+}
+
+.info .line.active {
+  width: 450px;
+}
+
+.info a {
+  display: inline-block;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: var(--gray);
+}
+
+.info a i {
+  font-size: 24px;
+  position: relative;
+  top: 4px;
+  margin-right: 0.6rem;
+}
+
+.info a:hover span {
+  color: var(--light001);
+}
+
+.photo {
+  width: 540px;
+  height: 540px;
+  margin: 20px;
+}
+
+.photo.p_01 {
+  background: url(../images/main.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.photo.p_02 {
+  background: url(../images/water.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.photo.p_03 {
+  background: url(../images/tissu_01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.photo.p_04 {
+  background: url(../images/brush.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 1200px) {
+  .search_area form {
+    width: 80%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .info {
+    padding: 1rem;
+  }
+
+  .info h1 {
+    font-size: 3rem;
+  }
+
+  .info .line {
+    margin-bottom: 2rem;
+  }
+
+  .photo {
+    width: 400px;
+    height: 400px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .search_area {
+    top: -100%;
+    height: 100vh;
+    opacity: 0;
+  }
+
+  .search_area.active {
+    top: 0%;
+    opacity: 1;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .info h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+
+  .info .line {
+    margin-bottom: 1rem;
+  }
+
+  .photo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  .info p {
+    font-size: 14px;
+  }
+
+  .info h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  .info .line {
+    margin-bottom: 1rem;
+  }
+
+  .info a {
+    margin-bottom: 0.2rem;
+    font-size: 12px;
+  }
+
+  .info a i {
+    font-size: 16px;
+    top: 2px;
+  }
+
+  .photo {
+    width: 100%;
+    height: 260px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .info h1 {
+    font-size: 1.6rem;
+  }
+
+  .info a {
+    letter-spacing: -0.5px;
+  }
+
+  .photo {
+    height: 200px;
+  }
+}
